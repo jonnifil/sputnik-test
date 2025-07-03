@@ -1,16 +1,16 @@
 <?php
 namespace App\Repositories;
 
-use App\Models\Price;
+use App\Models\Product;
 use Illuminate\Support\Facades\Request;
 
-class PriceRepository extends BaseRepository
+class ProductRepository extends BaseRepository
 {
     /**
-     * PriceRepository constructor.
-     * @param Price $model
+     * ProductRepository constructor.
+     * @param Product $model
      */
-    public function __construct(Price $model)
+    public function __construct(Product $model)
     {
         parent::__construct(Request::instance());
         $this->model = $model;

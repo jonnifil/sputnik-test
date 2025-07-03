@@ -2,12 +2,12 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Price;
+use App\Models\Product;
 use App\Services\CurrencyService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PriceResource extends JsonResource
+class ProductResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -19,10 +19,10 @@ class PriceResource extends JsonResource
         $currency = $request->get("currency", 'RUB');
         /** @var CurrencyService $service */
         $service = resolve(CurrencyService::class);
-        /** @var Price $this */
+        /** @var Product $this */
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'title' => $this->title,
             'price' => $service->convertPrintPrice($this->price, $currency),
         ];
     }
