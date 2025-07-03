@@ -1,0 +1,13 @@
+*.log
+.env
+.env.backup
+.env.production
+.phpactor.json
+/.idea
+/.phpunit.cache
+/vendor
+/php
+/nginx
+/postgres
+Dockerfile
+docker-compose.yml
